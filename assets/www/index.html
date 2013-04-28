@@ -1,0 +1,75 @@
+<head>
+    <meta name="viewport" content="width=320; user-scalable=no" />
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+      <link rel="stylesheet" href="css/jquery.mobile-1.1.0.css" />
+        
+        <script src="js/cordova-2.5.0.js"></script>
+     <script type="text/javascript" src="js/jquery.js"></script>
+        <script type="text/javascript" src="js/jquery.mobile-1.1.0.min.js"></script>
+    <script src="js/zepto.js"></script>
+    <script src="js/iscroll.js"></script>
+    <script src="js/connection.js"></script>
+
+    <script type="text/javascript" charset="utf-8" src="js/cordova-2.5.0.js"></script>
+    <script type="text/javascript" charset="utf-8">
+
+    
+    document.addEventListener("deviceready", onDeviceReady, false);
+
+    function onDeviceReady() {
+        navigator.splashscreen.show();
+		
+    }
+
+    </script>
+    <style>
+#username,#password { width: 15em }
+</style>
+</head>
+
+<body>
+    
+<div id="loginPage" data-role="page">
+
+  
+    <div data-role="header"> 
+<h1>Authentification :</h1>
+</div> 
+    <div id="header2">
+&nbsp;Accé autorisé que pour les employés de <i><b>Scrumers</b></i>  company !
+	</div>
+<center>
+    <div id="wrapper">    
+<div>
+<br>
+<br>
+
+           <label for="username">Username:</label>
+            <input type="text" name="username" id="username" value="" placeholder="Username" />
+</div>
+<div>
+            <label for="password">Password:</label>
+            <input type="password" name="password" id="password" value="" placeholder="Password" />
+            </div>
+            
+        <input type="button" value="Login" data-inline="true" id="submitButton" onClick="userlogin();">
+       	
+        <div id="erreur">  
+        
+        </div>
+        <div>
+        <img src="pics/log.jpg" />
+         <h4>&copy; Seifwares</h4>
+        </div>
+       </center>
+        </div>
+   
+   
+
+       
+    
+
+</div>
+
+</body>
+</html>

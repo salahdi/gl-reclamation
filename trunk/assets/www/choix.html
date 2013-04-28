@@ -1,0 +1,58 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <title>Choix</title>
+        <meta name="viewport" content="width=device-width,initial-scale=1"/>
+        <link rel="stylesheet" href="css/jquery.mobile-1.1.0.css" />
+        
+        <script src="js/cordova-2.5.0.js"></script>
+     <script type="text/javascript" src="js/jquery.js"></script>
+        <script type="text/javascript" src="js/jquery.mobile-1.1.0.min.js"></script>
+<style>
+.containing-element .ui-slider-switch { width: 15em };
+</style>
+<script>
+$(document).ready(function() {
+	$("#bout").live("click",function(event){
+
+                    event.preventDefault(); 
+                
+                    choix=$("#flip-min").attr("value");
+                       if (choix=='on')
+					   {
+						   
+				 window.location = 'send_rec.html';
+
+					   }
+					   else
+		 window.location = 'employeelist.html';
+
+                   
+                }); 
+	
+});
+</script>
+    </head>
+
+    <body>
+        
+<div data-role="header" data-theme="c"> 
+            <h1>What do you like to do !</h1>
+        </div>
+        <center>
+        <div class="containing-element">
+	<br/><br/><br/><br/><br/>
+	<select name="slider" id="flip-min" data-role="slider">
+		<option value="off">View the list of employees</option>
+		<option value="on">Send reclamation</option>
+	</select>
+    <br/><br/><br/><br/><br/>
+   <p>
+    <input class="ui-btn-hidden" type="button" data-inline="true" value="Go !" data-theme="e" data-transition="slide" aria-disabled="false" id="bout">
+    </p>
+</div>
+</center>
+
+    </body>
+
+</html>

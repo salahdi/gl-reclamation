@@ -1,0 +1,67 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <title>Send Rec</title>
+        <meta name="viewport" content="width=device-width,initial-scale=1"/>
+        <link rel="stylesheet" href="css/jquery.mobile-1.1.0.css" />
+        
+        <script src="js/cordova-2.5.0.js"></script>
+     <script type="text/javascript" src="js/jquery.js"></script>
+        <script type="text/javascript" src="js/jquery.mobile-1.1.0.min.js"></script>
+                
+				<script>
+				
+	$(document).ready (function () { 	
+								
+				
+	    $.ajax({
+		url:"http://www.seifwares.comuf.com/results.json", 
+	    dataType: 'jsonp', 
+		type: "POST",
+	    contanttype:'text/json',
+        success: function (data) {
+			  
+		alert(data);
+        successCallback(data);
+        },
+		error: function(data) {
+			//console.log(data); 
+			//alert(data[0]['id']);
+		  //      successCallback(data)  
+
+		}
+    });  
+	
+	function successCallback(data) {  
+    $.each(data, function (i, item) {  
+        $("#id3").append("<li>" + item.text + "</li>");  
+    });  
+}; 
+				});
+
+	</script>
+	
+<link href="css/jquery.mobile-1.1.0.css" rel="stylesheet">
+<style>
+.containing-element .ui-slider-switch { width: 15em }
+</style>
+    </head>
+
+    <body>
+        
+<div data-role="header" data-theme="c"> 
+            <h1>Write a Reclamation</h1>
+        </div>
+        <center>
+        <form name="f">	
+        <div data-role="fieldcontain">
+
+    <input class="ui-btn-hidden" data-inline="true" data-theme="b" type="submit" value="Send now!" data-transition="pop" id="rec" onClick="get();">
+</form>
+</center>
+<div id="id3"></div>
+
+
+</body>
+
+</html>
